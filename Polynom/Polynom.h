@@ -17,7 +17,7 @@ public:
 
 	TPolynomial& operator +=(TMonom & _v);
 
-	TPolynomial operator *(TPolynomial& _v);
+	TPolynomial operator *(const TPolynomial& _v);
 	TPolynomial operator +(TPolynomial & _v);
 	TPolynomial operator -(TPolynomial & _v);
 

@@ -68,7 +68,7 @@ TPolynomial& TPolynomial::operator+=(TMonom& _v)
 	return *this;
 }
 
-TPolynomial TPolynomial::operator*(TPolynomial& _v)
+TPolynomial TPolynomial::operator*(const TPolynomial& _v)
 {
 	TPolynomial res;
 	TMonom* tmp1 = static_cast<TMonom*>(root);
@@ -79,7 +79,7 @@ TPolynomial TPolynomial::operator*(TPolynomial& _v)
 		TMonom* tmp2 = static_cast<TMonom*>(_v.root);
 		while (tmp2 != 0)
 		{
-			TMonom tmp3 = (static_cast<TMonom&>(*tmp2)) * (static_cast<TMonom&>(*tmp1));
+			TMonom tmp3 = *tmp2 * *tmp1;
 			res += tmp3;
 			tmp2 = static_cast<TMonom*>(tmp2->GetNext());
 		}
