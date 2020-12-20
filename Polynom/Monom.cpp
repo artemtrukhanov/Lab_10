@@ -181,7 +181,7 @@ TMonom TMonom::operator*(const TMonom& _v)
     TMonom tmp(*this);
     tmp.data.K = data.K * _v.data.K;
 
-    for (int i = 0; i < data.dim; i++)
+    for (int i = 0; i < tmp.data.dim; i++)
         tmp.data.data[i] = this->data.data[i] + _v.data.data[i];
 
     return tmp;

@@ -71,8 +71,8 @@ TPolynomial& TPolynomial::operator+=(TMonom& _v)
 TPolynomial TPolynomial::operator*(const TPolynomial& _v)
 {
 	TPolynomial res;
-	TMonom* tmp1 = static_cast<TMonom*>(root);
-	if (root == 0 && _v.root == 0)
+	TMonom* tmp1 = static_cast<TMonom*>(this->root);
+	if (this->root == 0 && _v.root == 0)
 		throw new exception;
 	while (tmp1 != 0)
 	{
