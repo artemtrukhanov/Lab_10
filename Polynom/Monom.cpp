@@ -142,7 +142,7 @@ TMonom& TMonom::operator=(const TMonom& _v)
 
     next = 0;
     prev = 0;
-    data.K == _v.data.K;
+    data.K = _v.data.K;
 
     if (data.dim == _v.data.dim)
     {
