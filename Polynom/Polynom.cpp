@@ -226,21 +226,11 @@ void TPolynomial::LoadToFile()
 		throw new exception;
 	if (this->root == 0)
 		return;
-
 	TMonom* tmp = static_cast<TMonom*>(this->root);
-
 	while (tmp != NULL)
 	{
-		fout << tmp[0] << " ";
-		TMonom* temp2 = static_cast<TMonom*>(tmp->GetNext());
-		if (temp2 != NULL)
-		{
-			fout << temp2[0] << " ";
-			tmp = static_cast<TMonom*>(temp2->GetNext());
-		}
-		else
-		{
-			return;
-		}
+		fout << *(tmp) << " ";
+		tmp = static_cast<TMonom*>(tmp->GetNext());
 	}
+	return ;
 }
