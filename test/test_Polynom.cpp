@@ -87,7 +87,7 @@ TEST(TMonom, can_add)
 	ASSERT_NO_THROW(c = a + b);
 }
 
-TEST(TMonom, can_substruct)
+TEST(TMonom, can_subtract)
 {
 	TMonom a(new double[3]{ 1, 2, 3 }, 3, 1);
 	TMonom b(new double[3]{ 3, 2, 1 }, 3, 1);
@@ -110,6 +110,8 @@ TEST(TMonom, can_compare_less)
 
 	EXPECT_EQ(a < b, true);
 }
+
+
 
 
 TEST(Polynom, can_create_polynom)
@@ -152,7 +154,7 @@ TEST(Polynom, can_add)
 	ASSERT_NO_THROW(P2 + P1);
 }
 
-TEST(Polynom, can_substract)
+TEST(Polynom, can_subtract)
 {
 	TMonom a(new double[3]{ 1, 2, 3 }, 3, 1);
 	TMonom b(new double[3]{ 3, 2, 1 }, 3, 1);
