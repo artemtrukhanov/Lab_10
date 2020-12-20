@@ -14,7 +14,8 @@ protected:
     TListElem* next=0;
     TListElem* prev=0;
 public:
-    TListElem(T _data=0);
+    TListElem();
+    TListElem(T _data);
     ~TListElem();
 
     T GetData();
@@ -331,6 +332,14 @@ template <class T>
 int TList<T>::GetCount()
 {
     return count;
+}
+
+template<class T>
+inline TListElem<T>::TListElem()
+{
+    data = 0;
+    next = 0;
+    prev = 0;
 }
 
 template<class T>

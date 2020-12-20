@@ -79,7 +79,7 @@ TPolynomial TPolynomial::operator*(TPolynomial& _v)
 		TMonom* tmp2 = static_cast<TMonom*>(_v.root);
 		while (tmp2 != 0)
 		{
-			TMonom tmp3 = (*tmp2) * (*tmp1);
+			TMonom tmp3 = (static_cast<TMonom&>(*tmp2)) * (static_cast<TMonom&>(*tmp1));
 			res += tmp3;
 			tmp2 = static_cast<TMonom*>(tmp2->GetNext());
 		}
