@@ -206,7 +206,7 @@ TMonom* TMonom::operator+(const TMonom& _v)
     if (data.dim != _v.data.dim)
         throw new exception;
 
-    TMonom* tmp = 0;
+    TMonom* tmp;
     if (*this == _v)
     {
         tmp = new TMonom(*this);
